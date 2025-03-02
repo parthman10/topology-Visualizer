@@ -1,0 +1,170 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    z-index: 10;
+}
+
+/* Topology box */
+.topology {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 20px auto;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    }
+    to {
+        box-shadow: 0 0 40px rgba(255, 255, 255, 1);
+    }
+}
+
+/* Nodes styling */
+.node {
+    width: 70px;
+    height: 70px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+}
+
+/* Server node style */
+#server {
+    background-color: #C62E2E; /* Server color */
+}
+
+/* Data packet */
+.data-packet {
+    width: 20px;
+    height: 20px;
+    background-color: #ff4757;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+/* Star background */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('star.jpg');
+    animation: moveStars 30s linear infinite;
+}
+
+@keyframes moveStars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1000px 1000px;
+    }
+}
+
+/* Transfer options */
+#transferOptions {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: left;
+    width: 80%;
+    max-width: 600px;
+}
+
+#transferOptions label {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+#transferOptions select {
+    padding: 8px;
+    font-size: 1rem;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    color: #000;
+}
+
+#transferOptions button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#transferOptions button:hover {
+    background-color: #0056b3;
+}
+
+.dotted-line {
+    position: absolute;
+    height: 2px;
+    background: repeating-linear-gradient(
+        to right,
+        #FFAB5B,
+        #FFAB5B 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    transform-origin: 0% 50%;
+    z-index: 5;
+}
+
+.dotted-line {
+    position: absolute;
+    border-top: 2px dotted white;
+    transform-origin: 0 0;
+}
+
+.data-packet {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: cyan;
+    border-radius: 50%;
+    transition: all 0.6s linear;
+}
+
+
+
